@@ -12,6 +12,7 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import React from 'react';
 import AuthProvider from './Components/Provider/AuthProvider';
+import AddProduct from './Components/AddProduct';
 
 
 const router = createBrowserRouter([
@@ -32,7 +33,10 @@ const router = createBrowserRouter([
     {
       path:'register',
       element:<Register></Register>
-    },
+    },{
+      path:'addproduct',
+      element:<AddProduct></AddProduct>
+    }
 
 
   ],
