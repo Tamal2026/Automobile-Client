@@ -6,10 +6,10 @@ const BrandSection = () => {
     <div className="grid grid-cols-3 ml-20 ">
     <div className="card w-96 bg-base-100 shadow-2xl">
         <figure>
-        <img className="h-[300px]" src="https://i.ibb.co/WHMW85F/HD-wallpaper-tesla-amoled-black-logo-super-amoled.jpg" alt="Shoes" />
+        <img className="h-[300px] w-full" src="https://i.ibb.co/WHMW85F/HD-wallpaper-tesla-amoled-black-logo-super-amoled.jpg" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
+          <h2 className="card-title">Tesla</h2>
           
         </div>
       </div>
@@ -18,8 +18,8 @@ const BrandSection = () => {
         <img className="h-[300px] w-full" src="https://i.ibb.co/r69yT8n/ferrari.jpg" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title font-bold">Tesla</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          <h2 className="card-title font-bold">Ferrari</h2>
+          
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Buy Now</button>
           </div>
@@ -42,19 +42,19 @@ const BrandSection = () => {
           <img src="https://i.ibb.co/09WFbDd/purepng-com-nissan-car-logologocar-brand-logoscarsnissan-car-logo-1701527428763sqzkf.png" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
+          <h2 className="card-title">Nissan</h2>
           <p>If a dog chews shoes whose shoes does he choose?</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Buy Now</button>
           </div>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-base-100 shadow-2xl">
         <figure>
           <img src="https://i.ibb.co/Pr6vnPb/cf71fcdcf76f8bb55f58ae9240c60049.jpg" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
+          <h2 className="card-title"></h2>
           <p>If a dog chews shoes whose shoes does he choose?</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Buy Now</button>

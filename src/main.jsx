@@ -13,6 +13,7 @@ import Register from './Components/Register/Register';
 import React from 'react';
 import AuthProvider from './Components/Provider/AuthProvider';
 import AddProduct from './Components/AddProduct';
+import ShowProduct from './Components/ShowProduct';
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
     },{
       path:'addproduct',
       element:<AddProduct></AddProduct>
+    },{
+      path:'showproduct',
+      element:<ShowProduct></ShowProduct>,
+      loader:()=> fetch('http://localhost:5000/product')
     }
 
 

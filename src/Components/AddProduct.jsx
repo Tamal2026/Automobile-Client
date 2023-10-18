@@ -8,15 +8,15 @@ const AddProduct = () => {
     const handleCoffee = e =>{
         e.preventDefault();
         const form = e.target;
-        const name = form.name.value;
-        const brandName = form.brandName.value;
+        const brandname = form.brandname.value;
+        const modelname = form.modelname.value;
         const price = form.price.value;
       
         const rating = form.rating.value;
         const photo = form.photo.value;
 
         const newProduct = {
-            name,brandName, price,rating,photo,
+          brandname,modelname, price,rating,photo,
         }
         console.log(newProduct);
         fetch('http://localhost:5000/product',{
@@ -49,20 +49,20 @@ const AddProduct = () => {
         
           <div className="form-control ">
       <label className="label">
-        <span className="label-text"> Name</span>
+        <span className="label-text">  Brand</span>
       </label>
       <label className="input-group">
         
-        <input type="text" name="name" placeholder=" Name " className="input input-bordered bg-white w-1/4" />
+        <input type="text" name="brandname" placeholder=" Name " className="input input-bordered bg-white w-1/4" />
       </label>
     </div>
           <div className="form-control md:w-1/2">
       <label className="label">
-        <span className="label-text">Brand Name</span>
+        <span className="label-text">Model</span>
       </label>
       <label className="input-group">
         
-        <input type="text" name="brandName" placeholder="Brand Name" className="input input-bordered bg-white w-1/3" />
+        <input type="text" name="modelname" placeholder="Name" className="input input-bordered bg-white w-1/3" />
       </label>
     </div> 
          
