@@ -1,9 +1,12 @@
+import { Link } from "react-router-dom";
+
 const BrandSection = () => {
   return (
     <div className="bg-slate-100 mb-10">
         
       <h1>Branded Car Name And Details</h1>
-    <div className="grid grid-cols-3 ml-20 ">
+   <Link to={`/car`}> 
+   <div className="grid grid-cols-3 ml-20 ">
     <div className="card w-96 bg-base-100 shadow-2xl mb-4">
         <figure>
         <img className="h-[300px] w-full" src="https://i.ibb.co/WHMW85F/HD-wallpaper-tesla-amoled-black-logo-super-amoled.jpg" alt="Shoes" />
@@ -60,6 +63,8 @@ const BrandSection = () => {
         </div>
       </div>
     </div>
+   
+   </Link>
    
     </div>
   );
