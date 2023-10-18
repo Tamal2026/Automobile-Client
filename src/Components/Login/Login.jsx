@@ -2,16 +2,17 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../Firebase/firebase.config";
 import { useContext, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
 
 const auth = getAuth(app);
-const { user,signIn } = useContext(AuthContext);
+const { user} = useContext(AuthContext);
+const { signIn } = useContext(AuthContext);
 const [logError, setlogError] = useState("");
 const [logSuccess, setLogSuccess] = useState("");
-
+const naviGate = useNavigate();
 const handleLogin = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -27,7 +28,7 @@ const handleLogin = (e) => {
         console.log(result.user);
 
         setLogSuccess("logged in SucccessFully");
-      
+        naviGate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -40,7 +41,8 @@ const handleLogin = (e) => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-       
+        setLogSuccess("logged in SucccessFully");
+        naviGate(location?.state ? location.state : "/");
       })
       .catch(error =>{
         console.error(error);
