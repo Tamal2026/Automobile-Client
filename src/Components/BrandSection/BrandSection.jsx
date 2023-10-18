@@ -1,40 +1,33 @@
 const BrandSection = () => {
   return (
-    <div className="bg-slate-100">
+    <div className="bg-slate-100 mb-10">
         
       <h1>Branded Car Name And Details</h1>
     <div className="grid grid-cols-3 ml-20 ">
-    <div className="card w-96 bg-base-100 shadow-2xl">
+    <div className="card w-96 bg-base-100 shadow-2xl mb-4">
         <figure>
         <img className="h-[300px] w-full" src="https://i.ibb.co/WHMW85F/HD-wallpaper-tesla-amoled-black-logo-super-amoled.jpg" alt="Shoes" />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title">Tesla</h2>
+        <div className="card-body text-center">
+        <h2 className="font-bold text-lg mt-3 bg-red-600 text-white rounded-lg py-2">Tesla</h2>
           
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-base-100 mb-4 shadow-2xl">
         <figure>
         <img className="h-[300px] w-full" src="https://i.ibb.co/r69yT8n/ferrari.jpg" alt="Shoes" />
         </figure>
-        <div className="card-body">
-          <h2 className="card-title font-bold">Ferrari</h2>
-          
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+        <div className="text-center">
+        <h2 className="font-bold text-lg mt-3 bg-sky-600 text-center text-white rounded-lg py-2 mx-4">Ferrari</h2>
         </div>
       </div>
-      <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="card w-96 bg-base-100 mb-4 shadow-xl">
         <figure>
           <img className="h-[300px] w-full" src="https://i.ibb.co/vsWfwLM/images.png" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Audi</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+        <h2 className="font-bold text-lg mt-3 bg-teal-700 text-center text-white rounded-lg py-2 mx-4">Audi</h2>          
+          
         </div>
       </div>
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -42,11 +35,8 @@ const BrandSection = () => {
           <img src="https://i.ibb.co/09WFbDd/purepng-com-nissan-car-logologocar-brand-logoscarsnissan-car-logo-1701527428763sqzkf.png" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Nissan</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+        <h2 className="font-bold text-lg mt-3 bg-lime-700 text-center text-white rounded-lg py-2 mx-4">Nissan</h2>
+    
         </div>
       </div>
       <div className="card w-96 bg-base-100 shadow-2xl">
@@ -54,11 +44,9 @@ const BrandSection = () => {
           <img src="https://i.ibb.co/Pr6vnPb/cf71fcdcf76f8bb55f58ae9240c60049.jpg" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title"></h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+        <h2 className="font-bold text-lg mt-3 bg-cyan-600 text-center text-white rounded-lg py-2 mx-4">BMW</h2>
+      
+         
         </div>
       </div>
       <div className="card w-96 bg-base-100 shadow-2xl">
@@ -66,11 +54,9 @@ const BrandSection = () => {
           <img src="https://i.ibb.co/ysYDqh1/photo-1625074692991-b57f8ff90df6.jpg" alt="Shoes" />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Mercedez</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
+        <h2 className="font-bold text-lg mt-3 bg-indigo-700 text-center text-white rounded-lg py-2 mx-4">Marcedez</h2>
+        
+
         </div>
       </div>
     </div>
