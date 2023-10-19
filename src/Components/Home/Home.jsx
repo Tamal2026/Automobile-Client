@@ -1,6 +1,6 @@
 import Banner from "../Banner/Banner";
 import BestSellingCar from "../BestSellingCar";
-import BrandSection from "../BrandSection/BrandSection";
+import Brand from "../BrandSection/Brand";
 import UpcommingCar from "../UpcommingCar";
 
 
@@ -8,7 +8,8 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <BrandSection></BrandSection>
+      
+            <Brand></Brand>
             <BestSellingCar></BestSellingCar>
             <UpcommingCar></UpcommingCar>
         </div>
