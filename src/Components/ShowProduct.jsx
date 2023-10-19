@@ -16,9 +16,9 @@ const ShowProduct = () => {
   }, [brandname, carData]);
 
   return (
-    <div className="grid grid-cols-3">
+    <div className="grid grid-cols-1 lg:grid-cols-3">
       {cars.map((car, index) => (
-        <Details key={index} cars={car} />
+        <Details key={index} cars={cars} />
       ))}
     </div>
   );

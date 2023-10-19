@@ -6,7 +6,8 @@ const BrandSection = ({cars}) => {
   return (
     <div className="bg-slate-100 mb-10">
         
-      <h1>Branded Car Name And Details</h1>
+      <h1 className="text-5xl mx-auto text-center mb-10 
+       bg-orange-400 text-white px-3 py-2 rounded-lg  font-semibold w-1/4">Branded Car Name And Details</h1>
    <Link to={`/showproduct/${brandname}`}> 
    <div className="grid grid-cols-3 ml-20 ">
     <div className="card w-96 bg-base-100 shadow-2xl mb-4">
