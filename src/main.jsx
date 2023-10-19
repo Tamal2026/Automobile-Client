@@ -11,8 +11,7 @@ import AuthProvider from "./Components/Provider/AuthProvider";
 import AddProduct from "./Components/AddProduct";
 import ShowProduct from "./Components/ShowProduct";
 import MyCart from "./Components/MyCart";
-import PrivateRoute from "./Components/PrivateRoute";
-import CarDetails from "./CarDetails";
+import ErrorPage from "./Components/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -37,7 +36,7 @@ const router = createBrowserRouter([
         element: <AddProduct></AddProduct>,
       },
       {
-        path: "showproduct",
+        path: "showproduct/:brandname",
         element: <ShowProduct></ShowProduct>,
         loader: () => fetch("http://localhost:5000/product"),
       },
@@ -46,9 +45,9 @@ const router = createBrowserRouter([
         element: <MyCart></MyCart>,
       },
       {
-        path:'/car/:brandname',
-        element:<PrivateRoute><CarDetails></CarDetails></PrivateRoute>
-      }
+        path:"*",
+        element:<ErrorPage></ErrorPage>
+      },
     ],
   },
 ]);

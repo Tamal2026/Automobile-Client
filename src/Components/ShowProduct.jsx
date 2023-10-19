@@ -1,15 +1,24 @@
-import { useLoaderData } from "react-router-dom";
-import ShowProductCard from "./ShowProductCard";
+import { useLoaderData, useParams } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import Details from "./Details";
 
 const ShowProduct = () => {
-  const products = useLoaderData();
+  const [cars, setCars] = useState([]);
+  const { brandname } = useParams();
+  const carData = useLoaderData();
+  console.log(carData);
+
+  useEffect(() => {
+    if (carData) {
+      const findCars = carData.filter((findCar) => findCar.brandname ==  brandname);
+      setCars(findCars);
+    }
+  }, [brandname, carData]);
+
   return (
-    <div
-      className="grid grid-cols-3" >
-
-
-      {products?.map((product) => (
-        <ShowProductCard key={product._id} product={product}></ShowProductCard>
+    <div className="grid grid-cols-3">
+      {cars.map((car, index) => (
+        <Details key={index} cars={car} />
       ))}
     </div>
   );

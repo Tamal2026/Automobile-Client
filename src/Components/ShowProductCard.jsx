@@ -2,6 +2,8 @@
 
 const ShowProductCard = ({ product }) => {
   const { modelname, photo,brandname,price } = product || {};
+
+  
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-2xl">

@@ -1,11 +1,13 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-const BrandSection = () => {
+const BrandSection = ({cars}) => {
+  const {brandname} = cars || {} ;
   return (
     <div className="bg-slate-100 mb-10">
         
       <h1>Branded Car Name And Details</h1>
-   <Link to={`/car`}> 
+   <Link to={`/showproduct/${brandname}`}> 
    <div className="grid grid-cols-3 ml-20 ">
     <div className="card w-96 bg-base-100 shadow-2xl mb-4">
         <figure>
