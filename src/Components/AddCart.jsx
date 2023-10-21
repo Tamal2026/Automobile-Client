@@ -1,11 +1,10 @@
+import Swal from "sweetalert2";
 
 
 const AddCart = () => {
 
 
-    const handleAddCart = ()=>{
-        fetch()
-    }
+    
     return (
         <div>
             

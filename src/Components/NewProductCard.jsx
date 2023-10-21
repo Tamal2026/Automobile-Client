@@ -1,8 +1,40 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const NewProductCard = ({ sProduct }) => {
   const { price, image, brandname, modelname, rating, Type, _id } =
     sProduct || {};
+    const handleAddCart = () => {
+      const cartProduct = {
+        brandname: brandname,
+        modelname: modelname,
+        price: price,
+        rating: rating,
+        Type: Type,
+        image: image,
+      };
+    
+      fetch("https://server-side-9maji8bub-tamal-krishna-das-projects.vercel.app/product", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(cartProduct),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          if (data.modifiedCount > 0) {
+            Swal.fire({
+              title: "Success!",
+              text: "Product Update successfully",
+              icon: "success",
+              confirmButtonText: "Cool",
+            });
+          }
+        });
+    };
+    
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -28,7 +60,7 @@ const NewProductCard = ({ sProduct }) => {
             </p>
             <button className="btn btn-primary">Add to Cart</button>
             <Link to={`/updateproduct/${_id}`}>
-              <button className="btn btn-primary bg-red-500 ml-10">
+              <button onClick={handleAddCart} className="btn btn-primary bg-red-500 ml-10">
                 Update
               </button>
             </Link>

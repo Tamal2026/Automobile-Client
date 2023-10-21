@@ -14,10 +14,10 @@ const UpdateData = () => {
     const price = form.price.value;
   
     const rating = form.rating.value;
-    const photo = form.photo.value;
+
 
     const newProduct = {
-      brandname,modelname, price,rating,photo,
+      brandname,modelname, price,rating,
     }
     console.log(newProduct);
     fetch(`https://server-side-9maji8bub-tamal-krishna-das-projects.vercel.app/product/${_id}`,{

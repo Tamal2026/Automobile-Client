@@ -17,7 +17,7 @@ const Brand = () => {
        bg-orange-400 text-white px-3 py-2 rounded-lg  font-semibold w-1/4">Branded Car Name And Details</h1>
        <div >
            
-      <div className="grid grid-cols-3">
+      <div className="grid grid-cols-1 lg:grid-cols-3">
         {brands?.map((brand, index) => (
           <BrandShowing key={index} brands={brand}></BrandShowing>
         ))}
