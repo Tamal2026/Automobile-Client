@@ -14,6 +14,8 @@ import MyCart from "./Components/MyCart";
 import ErrorPage from "./Components/ErrorPage";
 import About from "./Components/About";
 import PrivateRoute from "./Components/PrivateRoute";
+import ShowProductCard from "./Components/ShowProductCard";
+import UpdateData from "./Components/UpdateData";
 
 const router = createBrowserRouter([
   {
@@ -39,19 +41,38 @@ const router = createBrowserRouter([
       },
       {
         path: "showproduct/:brandname",
-        element: <PrivateRoute><ShowProduct></ShowProduct></PrivateRoute>,
-        loader: () => fetch("http://localhost:5000/product"),
+        element: (
+          <PrivateRoute>
+            <ShowProduct></ShowProduct>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://server-side-9maji8bub-tamal-krishna-das-projects.vercel.app/product"
+          ),
       },
       {
         path: "mycart",
         element: <MyCart></MyCart>,
-      },{
-        path:'/about',
-        element:<About></About>
       },
       {
-        path:"*",
-        element:<ErrorPage></ErrorPage>
+        path: "/about",
+        element: <About></About>,
+      },
+      {
+        path: "*",
+        element: <ErrorPage></ErrorPage>,
+      },
+      {
+        path: "/showproductcard/:_id",
+        element: <ShowProductCard></ShowProductCard>,
+        loader: () => fetch("https://server-side-9maji8bub-tamal-krishna-das-projects.vercel.app/product"),
+      },
+      {
+        path: "/updateproduct/:_id",
+        element: <UpdateData></UpdateData>,
+        loader: ({ params }) =>
+          fetch(`https://server-side-9maji8bub-tamal-krishna-das-projects.vercel.app/product/${params._id}`),
       },
     ],
   },

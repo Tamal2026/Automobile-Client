@@ -19,7 +19,7 @@ const AddProduct = () => {
           brandname,modelname, price,rating,photo,
         }
         console.log(newProduct);
-        fetch('http://localhost:5000/product',{
+        fetch('https://server-side-jeb6ttpo0-tamal-krishna-das-projects.vercel.app//product',{
             method:'POST',
             headers:{
                 'content-type': 'application/json'
@@ -66,23 +66,7 @@ const AddProduct = () => {
       </label>
     </div> 
          
-          {/* <div className="form-control md:1/2 ">
-      <label className="label">
-      <details className="dropdown mb-32">
-  <summary className="m-1 btn">Type</summary>
-  <ul name="type" className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-    <li><a>BMW</a></li>
-    <li><a>Marcedez</a></li>
-    <li><a>Ferrari</a></li>
-    <li><a>Tesla</a></li>
-    <li><a>Nissan</a></li>
-    <li><a>Audi</a></li>
- 
-  </ul>
-</details>
-      </label>
-  
-    </div> */}
+   
           <div className="form-control w-full">
       <label className="label">
         <span className="label-text">Price</span>

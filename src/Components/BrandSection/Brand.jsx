@@ -12,6 +12,7 @@ const Brand = () => {
 
   return (
     <>
+    
     <h1 className="text-5xl mx-auto text-center mb-10 
        bg-orange-400 text-white px-3 py-2 rounded-lg  font-semibold w-1/4">Branded Car Name And Details</h1>
        <div >
